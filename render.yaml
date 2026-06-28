@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fastapi-config-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: APP_LOG_LEVEL
+        value: debug
+      - key: APP_API_KEY
+        value: key-eun21k1aan
